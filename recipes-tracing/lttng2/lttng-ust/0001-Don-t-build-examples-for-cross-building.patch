@@ -1,0 +1,22 @@
+From ff6054e361e4bc98de7fe23e3215695bcf097a78 Mon Sep 17 00:00:00 2001
+From: qatools <qatools@svr-pkl-qatools-1.mgc.mentorg.com>
+Date: Mon, 17 Feb 2014 14:25:47 +0500
+Subject: [PATCH] Don't build examples for cross-building
+
+---
+ doc/Makefile.am |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/doc/Makefile.am b/doc/Makefile.am
+index 72dcde2..4989f94 100644
+--- a/doc/Makefile.am
++++ b/doc/Makefile.am
+@@ -1,4 +1,4 @@
+-SUBDIRS = . examples
++SUBDIRS = .
+ 
+ dist_man_MANS = man/lttng-gen-tp.1 \
+ 	man/lttng-ust.3 \
+-- 
+1.7.9.5
+
