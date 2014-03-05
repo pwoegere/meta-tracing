@@ -16,12 +16,10 @@ SRCREV = "v2.4.0"
 PV = "2.4.0+git${SRCPV}"
 
 SRC_URI = "git://git.lttng.org/lttng-tools.git \
-           "
+		   file://compile-consumers-with-o1.patch \
+"
 
 S = "${WORKDIR}/git"
-
-#CFLAGS +=  "-O1"
-LDFLAGS += "-Wl,-O1"
 
 inherit autotools
 
