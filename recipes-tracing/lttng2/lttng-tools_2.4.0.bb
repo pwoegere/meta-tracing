@@ -15,9 +15,8 @@ RDEPENDS_${PN}-ptest += "make"
 SRCREV = "v2.4.0"
 PV = "2.4.0+git${SRCPV}"
 
-SRC_URI = "git://git.lttng.org/lttng-tools.git \
-		   file://compile-consumers-with-o1.patch \
-"
+SRC_URI = "git://git.lttng.org/lttng-tools.git"
+SRC_URI_append_arm = " file://compile-consumers-with-o1.patch"
 
 S = "${WORKDIR}/git"
 

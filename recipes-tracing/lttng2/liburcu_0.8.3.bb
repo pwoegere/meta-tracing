@@ -10,10 +10,10 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=0f060c30a27922ce9c0d557a639b4fa3 \
 SRCREV = "v0.8.3"
 PV = "0.8.3+git${SRCPV}"
 
-EXTRA_OECONF = "--disable-compiler-tls"
+EXTRA_OECONF_append_arm = "--disable-compiler-tls"
 
-SRC_URI = "git://git.lttng.org/userspace-rcu.git \
-           file://whitelist-sourcery-codebench-2013.11-32.patch"
+SRC_URI = "git://git.lttng.org/userspace-rcu.git"
+SRC_URI_append_arm = " file://whitelist-sourcery-codebench-2013.11-32.patch"
 
 S = "${WORKDIR}/git"
 CFLAGS_append_libc-uclibc = " -D_GNU_SOURCE"

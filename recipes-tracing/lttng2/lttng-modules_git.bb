@@ -14,8 +14,8 @@ SRCREV = "v2.4.0"
 PV = "2.4.0+git${SRCPV}"
 
 SRC_URI = "git://git.lttng.org/lttng-modules.git \
-           file://lttng-modules-replace-KERNELDIR-with-KERNEL_SRC.patch \
-           file://whitelist-sourcery-codebench-2013.11-32.patch"
+           file://lttng-modules-replace-KERNELDIR-with-KERNEL_SRC.patch"		   
+SRC_URI_append_arm = " file://whitelist-sourcery-codebench-2013.11-32.patch"
 
 export INSTALL_MOD_DIR="kernel/lttng-modules"
 export KERNEL_SRC="${STAGING_KERNEL_DIR}"
