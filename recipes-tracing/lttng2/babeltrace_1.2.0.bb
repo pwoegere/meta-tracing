@@ -16,6 +16,8 @@ PV = "1.2.0+git${SRCPV}"
 SRC_URI = "git://git.efficios.com/babeltrace.git \
 		   file://lttng-live-missing-header.patch"
 
+CFLAGS_append_arm = " -g -O0"
+
 S = "${WORKDIR}/git"
 
 do_configure_prepend () {
