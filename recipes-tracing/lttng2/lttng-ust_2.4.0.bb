@@ -23,6 +23,7 @@ PE = "2"
 
 SRC_URI = "git://git.lttng.org/lttng-ust.git \
 	   file://0001-Don-t-build-examples-for-cross-building.patch \
+	   file://separate_collecting_and_emitting_baddr_statedumps_v2.patch \
 	   "
 
 S = "${WORKDIR}/git"
